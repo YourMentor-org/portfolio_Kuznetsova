@@ -1,0 +1,21 @@
+html, body, ul, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	background: #fff;
+}
+
+ul{
+	list-style: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.wrap {
+	width: 1150px;
+	margin: 0 auto;
+}

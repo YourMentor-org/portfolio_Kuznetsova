@@ -1,0 +1,9 @@
+@font-face {
+	font-family: BrutalLight;
+	src: url(../assets/font/BrutalTypeBold.ttf);
+}
+
+@font-face {
+	font-family: Roboto Regular;
+	src: url(../assets/font/BrutalTypeLight.ttf);
+}
