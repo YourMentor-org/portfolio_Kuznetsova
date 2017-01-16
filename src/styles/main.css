@@ -15,7 +15,38 @@ li {
     list-style-type: none;
 }
 
+a {
+	text-decoration: none;
+}
 .wrap {
 	width: 1150px;
 	margin: 0 auto;
+	display: flex;
 }
+
+.header {
+	height: 20px;
+	padding-top: 21px;
+	margin-bottom: 75px;
+}
+
+.header__lang{
+	display: block;
+	text-align: right;
+
+}
+
+.header__lang_rus{
+	margin-right: 34px;
+	color: #7a8289;
+	font: 10px "BrutalBold", Arial, sans-serif;
+	font-weight: bold;
+}
+
+.header__lang_eng{
+	color: #7a8289;
+	font: 10px "BrutalBold", Arial, sans-serif;
+	font-weight: bold;
+	margin-right: 26px;
+}
+
