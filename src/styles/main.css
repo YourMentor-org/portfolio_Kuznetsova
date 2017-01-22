@@ -17,17 +17,17 @@ li {
 
 a {
 	text-decoration: none;
+	display: block;
 }
 .wrap {
 	width: 1150px;
 	margin: 0 auto;
-	display: flex;
 }
 
 .header {
 	height: 20px;
 	padding-top: 21px;
-	margin-bottom: 75px;
+	margin-bottom: 50px;
 }
 
 .header__lang{
@@ -50,3 +50,136 @@ a {
 	margin-right: 26px;
 }
 
+.img {
+	margin-right: 190px;
+	display: inline-block;
+}
+.img__avatar{
+	border-radius: 50%;
+}
+
+.wrap{
+	display: flex;
+	flex-flow: row;
+}
+
+.content__header_surename{
+	margin-right: 25px;
+	font: 45px "BrutalBold", Arial, sans-serif;
+	font-weight: bold;
+	color: #656f77;
+}
+
+.content__header_name{
+	font: 45px "BrutalLight;", Arial, sans-serif;
+	color: #656f77;
+}
+
+.content__header{
+	margin-bottom: 107px;
+}
+
+.content{
+	display: inline-block;
+}
+
+.content__social{
+	margin-bottom: 50px;
+}
+
+.content__social-icon{
+	margin-right: 17px;
+}
+.content__social-item{
+	display: inline-block;
+	width: 49%;
+    vertical-align: top;
+    margin-bottom: 54px;
+}
+
+.content__social-inf{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.content__social-text{
+	font: 14px "BrutalLight;", Arial, sans-serif;
+	color: #656f77;
+}
+
+.content__social-link{
+	font: 19px "BrutalBold", Arial, sans-serif;
+	font-weight: bold;
+	color: #d82f93;
+	transition: all .3s linear;
+}
+
+.content__social-link:hover{
+	text-decoration: underline;
+}
+
+
+.content__app{
+	font: 16px "BrutalLight", Arial, sans-serif;
+	color: #656f77;
+	position: relative;
+}
+
+.content__social:after{
+	content: "";
+	width: 8px;
+	height: 8px;
+	background: #d82f93;
+	border-radius: 50%;
+	display: block;
+	position: absolute;
+
+}
+
+._email{
+	background: url(../assets/img/email.svg) no-repeat;
+	background-size: 46px 46px;
+	width: 46px;
+	height: 46px;
+	vertical-align: middle;
+}
+
+._git{
+	background: url(../assets/img/github.svg) no-repeat;
+	background-size: 46px 46px;
+	width: 46px;
+	height: 46px;
+	vertical-align: middle;
+}
+
+._vk{
+	background: url(../assets/img/vk.svg) no-repeat;
+	background-size: 46px 46px;
+	width: 46px;
+	height: 46px;
+	vertical-align: middle;
+}
+
+._tel{
+	background: url(../assets/img/phone.svg) no-repeat;
+	background-size: 46px 46px;
+	width: 46px;
+	height: 46px;
+	vertical-align: middle;
+}
+
+._tw{
+	background: url(../assets/img/twitter.svg) no-repeat;
+	background-size: 46px 46px;
+	width: 46px;
+	height: 46px;
+	vertical-align: middle;
+}
+
+._loc{ 
+	background: url(../assets/img/location.svg) no-repeat;
+	background-size: 46px 46px;
+	width: 46px;
+	height: 46px;
+	vertical-align: middle;
+}
