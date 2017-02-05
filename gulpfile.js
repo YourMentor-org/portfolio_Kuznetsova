@@ -8,6 +8,8 @@ var rename = require ('gulp-rename');
 var postcss = require('gulp-postcss');
 var assets = require ('postcss-assets');
 var short = require('postcss-short');
+var handlebars = require('gulp-compile-handlebars');
+var templateContext = require('./src/example.json');
 
 gulp.task('default', ['dev']);
 gulp.task('dev', ['build-dev', 'browser-sync', 'watch']);
@@ -16,7 +18,7 @@ gulp.task('prod', ['clean'], function() {
 });
 
 gulp.task('build-dev', ['html', 'css-dev', 'assets', 'scripts']);
-gulp.task('build-prod', ['html', 'css-prod', 'assets', 'scripts']);
+gulp.task('build-prod', ['html', 'css-prod', 'assets', 'scripts', 'handlebars']);
 	
 gulp.task('css-dev', function () {
 	var processors = [
@@ -88,4 +90,14 @@ gulp.task('scripts', function () {
 	return gulp.src('./src/scripts/*.js')
 		.pipe(concat('scripts.js'))
 		.pipe(gulp.dest('./build/scripts/'));
+});
+
+gulp.task('handlebars', function (){
+		var options = {
+			batch: ['./src/partials/']
+		};
+		return gulp.src('./src/index.hbs')
+			.pipe(handlebars({templateContext}, options))
+			.pipe(rename('header.html'))
+			.pipe(gulp.dest('./build/'));
 });
