@@ -17,8 +17,8 @@ gulp.task('prod', ['clean'], function() {
 		gulp.run('build-dev');
 });
 
-gulp.task('build-dev', ['html', 'css-dev', 'assets', 'scripts']);
-gulp.task('build-prod', ['html', 'css-prod', 'assets', 'scripts', 'handlebars']);
+gulp.task('build-dev', ['css-dev', 'assets', 'scripts', 'handlebars']);
+gulp.task('build-prod', ['css-prod', 'assets', 'scripts', 'handlebars']);
 	
 gulp.task('css-dev', function () {
 	var processors = [
@@ -74,6 +74,8 @@ gulp.task('watch', function() {
 	gulp.watch('./src/index.html', ['html']);
 	gulp.watch('./src/**/*.*', browserSync.reload);
 	gulp.watch('./src/scripts/*.js',['scripts']);
+	gulp.watch('./src/partials/*.hbs',['handlebars']);
+	gulp.watch('.src/example.json');
 });
 
 gulp.task('clean', function() {
@@ -97,7 +99,7 @@ gulp.task('handlebars', function (){
 			batch: ['./src/partials/']
 		};
 		return gulp.src('./src/index.hbs')
-			.pipe(handlebars({templateContext}, options))
-			.pipe(rename('header.html'))
+			.pipe(handlebars(templateContext, options))
+			.pipe(rename('index.html'))
 			.pipe(gulp.dest('./build/'));
 });
