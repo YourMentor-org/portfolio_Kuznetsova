@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "string-quotes": "double",
+    "function-url-quotes": "always",
+    "declaration-colon-space-after": "never",
+    "color-hex-case": "upper"
+  }
+}

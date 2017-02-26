@@ -4,7 +4,7 @@ html, body, ul, h1, p {
 }
 
 body {
-	background: rgb(239, 240, 241);
+	 background: rgb(239, 240, 241);
     background: -webkit-linear-gradient(90deg, rgb(239, 240, 241) 21%, rgb(255, 255, 255) 0%);
     background: -o-linear-gradient(90deg, rgb(239, 240, 241) 21%, rgb(255, 255, 255) 0%);
     background: -ms-linear-gradient(90deg, rgb(239, 240, 241) 21%, rgb(255, 255, 255) 0%);
