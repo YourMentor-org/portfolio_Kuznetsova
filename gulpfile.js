@@ -21,7 +21,7 @@ gulp.task('prod', ['clean'], function() {
 	gulp.run('build-dev');
 });
 
-gulp.task('build-dev', ['css-dev', 'assets', 'scripts', 'handlebars', /*'css-lint'*/]);
+gulp.task('build-dev', ['css-dev', 'assets', 'scripts', 'handlebars', ]);
 gulp.task('build-prod', ['css-prod', 'assets', 'scripts', 'handlebars']);
 	
 gulp.task('css-dev', function () {
@@ -112,14 +112,3 @@ gulp.task('handlebars', function (){
 			.pipe(gulp.dest('./build/'));
 });
 
-/*gulp.task('css-lint', function (){
-   gulp.src('./src/styles/*.css')
-    .pipe(stylelintGulp({
-       reporters: [
-          {
-              formatter: 'string',
-              console: true
-          }
-       ]
-    }))
-});*/
