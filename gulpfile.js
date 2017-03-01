@@ -21,7 +21,7 @@ gulp.task('prod', ['clean'], function() {
 	gulp.run('build-dev');
 });
 
-gulp.task('build-dev', ['css-dev', 'assets', 'scripts', 'handlebars', ]);
+gulp.task('build-dev', ['css-dev', 'assets', 'scripts', 'handlebars' ]);
 gulp.task('build-prod', ['css-prod', 'assets', 'scripts', 'handlebars']);
 	
 gulp.task('css-dev', function () {
