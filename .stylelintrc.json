@@ -3,6 +3,6 @@
     "string-quotes": "single",
     "function-url-quotes": "always",
     "color-hex-case": "lower",
-    "declaration-colon-space-after" : "always" 
+    "declaration-colon-space-after" : "always"
   }
 } 
