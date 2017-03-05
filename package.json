@@ -27,12 +27,11 @@
   "scripts": {
     "clean": "rm -rf build",
     "start": "npm run clean && gulp && npm run stylelint",
-    "stylelint": "stylelint src/styles/*css || true",
-    "lint": "npm run stylelint"
+    "stylelint": "stylelint src/styles/*css || true"
   },
 
-  "pre-cpommit": [
-    "lint"
+  "pre-commit": [
+    "stylelint"
   ],
 
   "author": "AnnaKuznetsova",
