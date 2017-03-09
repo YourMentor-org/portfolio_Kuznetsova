@@ -8,6 +8,7 @@ var rename = require ('gulp-rename');
 var postcss = require('gulp-postcss');
 var reporter = require('postcss-browser-reporter');
 var stylelint = require('stylelint');
+var stylelintGulp = require('gulp-stylelint');
 var assets = require ('postcss-assets');
 var short = require('postcss-short');
 var handlebars = require('gulp-compile-handlebars');
@@ -17,16 +18,15 @@ var config = require('./.stylelintrc.json')
 gulp.task('default', ['dev']);
 gulp.task('dev', ['build-dev', 'browser-sync', 'watch']);
 gulp.task('prod', ['clean'], function() {
-		gulp.run('build-dev');
+	gulp.run('build-dev');
 });
 
-gulp.task('build-dev', ['css-dev', 'assets', 'scripts', 'handlebars']);
+gulp.task('build-dev', ['css-dev', 'assets', 'scripts', 'handlebars', /*'css-lint'*/ ]);
 gulp.task('build-prod', ['css-prod', 'assets', 'scripts', 'handlebars']);
 	
 gulp.task('css-dev', function () {
 	var processors = [
 		stylelint(config),
-
 		assets ({
 			loadPaths: ['src/assets/img/'],
 			relativTo: 'src/styles/'
@@ -111,3 +111,15 @@ gulp.task('handlebars', function (){
 			.pipe(rename('index.html'))
 			.pipe(gulp.dest('./build/'));
 });
+
+/*gulp.task('css-lint', function (){
+   gulp.src('./src/styles/*.css')
+    .pipe(stylelintGulp({
+       reporters: [
+          {
+              formatter: 'string',
+              console: true
+          }
+       ]
+    }))
+});*/
