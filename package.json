@@ -6,18 +6,8 @@
   "scripts": {
     "clean": "rm -rf build",
     "start": "npm run clean && gulp && npm run stylelint",
-    "stylelint": "stylelint src/styles/*css || false",
-    "commitmsg": "validate-commit-msg" 
-
-  },
-
-   "config": {
-    "validate-commit-msg": {
-      "maxSubjectLength": 50,
-      "types": "conventional-commit-types",
-      "subjectPatternErrorMsg": "subject does not match subject pattern!"
-    }
-  },
+    "stylelint": "stylelint src/styles/*css || false"
+},
 
   "dependencies": {
     "browser-sync": "^2.18.6",
